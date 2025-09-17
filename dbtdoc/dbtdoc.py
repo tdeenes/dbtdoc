@@ -142,7 +142,7 @@ def _scan_comment(target_dir):
         doc_blocks = {}
         dbt_blocks = []
         top_level = "unknown"
-        for fname in files:
+        for fname in sorted(files):
             # Parse the table name from the SQL file name
             if fname[-3:] != "sql":
                 LOGGER.info("Skipping non-sql file: " + fname)
